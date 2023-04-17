@@ -1,10 +1,14 @@
-from flask import Flask, jsonify, request, make_response
-from estrutura_banco_de_dados import Autor, Postagem, app, db
 import json
-import jwt
 from datetime import datetime, timedelta
 from functools import wraps
+
+import jwt
+from flask import Flask, jsonify, make_response, request
+
+from estrutura_banco_de_dados import Autor, Postagem, app, db
+
 # Rota padrão - GET https://localhost:5000
+# Comentário adicionado
 
 
 def token_obrigatorio(f):
